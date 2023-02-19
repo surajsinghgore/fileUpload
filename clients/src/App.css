@@ -1,0 +1,304 @@
+.App{
+width: 100%;
+}
+
+
+a{
+text-decoration: none;
+}
+.App header{
+width: 100%;
+height: 65px;
+display: flex;
+}
+.App header .left{
+font-size: 25px;
+padding-top: 1%;
+width: 40%;
+color: rgb(42, 143, 184);
+padding-left: 1%;
+font-weight: 500;
+}
+.App header .left::first-letter{
+color: rgb(0, 53, 196);
+}
+
+.App header .right{
+list-style: none;
+margin-left: 25%;
+padding-top: 1.2%;
+
+display: flex;
+}
+.App header .right li{
+font-size: 20px;
+margin-left: 20%;
+color: rgb(73, 73, 73);
+}
+
+/* banner */
+.App .banner{
+position: relative;
+width: 100%;
+height: 200px;
+overflow: hidden;
+
+}
+
+
+.App .banner .images{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 200px;
+z-index: -99;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.App .banner .images img{
+width: 100%;
+margin-top: -17%;
+height: 600px;
+}
+
+
+.App .banner .search{
+z-index: 99;
+width: 100%;
+line-height: 200px;
+text-align: center;
+}
+.App .banner .search input{
+width: 28%;
+outline: none;
+color: rgb(4, 128, 150);
+border: none;
+padding: 0.9% 2% 1% 1%;
+font-size: 20px;
+}
+.App .banner .search input:focus{
+border: 3px solid rgb(22, 167, 234);
+}
+
+.App .banner .search button{
+font-size: 18px;
+border: none;
+color: white;
+padding: 1% 3% 1% 3%;
+background-color: rgb(0, 111, 142);
+}
+
+
+.App  .imagesAll{
+width: 100%;
+height: auto;
+}
+.App  .imagesAll .top{
+display: flex;
+}
+.App  .imagesAll .top .title{
+width: 40%;
+}
+.App .imagesAll .top .title h2{ 
+font-size: 30px;
+padding-left: 2%;
+color: rgb(6, 147, 179);
+}
+.App .imagesAll .top .pages{
+width: 60%;
+font-size: 20px;
+padding-top: 2%;
+padding-right: 2%;
+color: rgb(1, 164, 189);
+text-align: right;
+} 
+.App .imagesAll .top .pages input{
+width: 40px;
+outline: none;
+padding: 0.3% 0.1%;
+text-align: center;
+font-size: 18px;
+}
+.App .imagesAll .top .pages input:focus{
+border: 2px solid red;
+}
+
+.App .imagesAll .imagesSection{
+width: 100%;
+height: auto;
+margin-bottom: 5%;
+padding-left: 0.6%;
+overflow: hidden;
+margin-top: 0;
+}
+.App .imagesAll .imagesSection .Imgcard{
+margin-left: 0.7%;
+position: relative;
+overflow: hidden;
+margin-top: 1%;
+width: 310px;
+margin-right: 1%;
+margin-bottom: 3%;
+float: left;
+}
+.App .imagesAll .imagesSection .Imgcard .img{
+width: 100%;
+overflow: hidden;
+height: 180px;
+position: relative;
+}
+
+.App .imagesAll .imagesSection .Imgcard .img img{
+width: 100%;
+height: 100%;
+}
+.App .imagesAll  .deatils{
+color: rgb(101, 101, 101);
+display: flex;
+z-index: 99;
+}
+.App .imagesAll  .deatils .date{
+padding-top: 1%;
+width: 50%;
+}
+
+.App .imagesAll  .deatils .author{
+padding-top: 1%;
+width: 50%;
+text-align: right;
+}
+
+
+
+.App .imagesAll  .imagesSection .Imgcard .hover{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+overflow: hidden;
+height: 175px;
+transform: scale(0);
+transition: all 0.3s  ease-in-out;
+}
+
+/* hover animation */
+.App .imagesAll  .imagesSection .Imgcard:hover .hover{
+transform: scale(1);
+
+}
+.App .imagesAll  .imagesSection .Imgcard:hover img{
+filter: brightness(1.3);
+}
+.App .imagesAll  .imagesSection .Imgcard .hover .outter{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgb(135, 135, 135);
+opacity: 0.7;
+}
+
+.App .imagesAll  .imagesSection .Imgcard .hover .keyword{
+position: relative;
+width: 80%;
+margin-left: 10%;
+z-index: 99;
+border: 3px solid white;
+margin-top: 10%;
+line-height: 400%;
+height: 65%;
+}
+
+.App .imagesAll  .imagesSection .Imgcard .hover .keyword .innerBg{
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+width: 100%;
+height: 100%;
+background-color: rgb(162, 162, 162);
+opacity: 0.3;
+}
+.App .imagesAll  .imagesSection .Imgcard .hover .keyword h3{
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+font-weight: 400;
+width: 100%;
+height: 100%;
+z-index: 5;
+color: rgb(255, 255, 255) !important;
+margin-top: 0;
+text-align: center;
+opacity: 1 !important;
+font-size: 25px;
+padding-top: 12%;
+}
+
+/* upload page css */
+
+
+.upload{
+width: 100%;
+height: auto;
+}
+
+.upload form{
+width: 80%;
+list-style: none;
+margin-left: 10%;
+margin-top: 2%;
+display: block;
+box-shadow: 0px 0px 12px 2px rgb(239, 239, 239);
+}
+.upload form li{
+width: 100%;
+height: auto;
+padding-top: 2%;
+}
+
+.upload form li h1{
+font-size: 15px;
+margin-top: 0;
+padding-left: 2%;
+}
+.upload form li input{
+width: 93%;
+outline: none;
+font-size: 18px;
+margin-left: 2%;
+padding: 0.7% 1%;
+}
+.upload form li p{
+color: red;
+margin-top: 1%;
+font-size: 19px;
+padding-left: 2%;
+}
+.upload form button{
+font-size: 18px;
+padding: 1% 2%;
+cursor: pointer;
+border: none;
+background-color:rgb(3, 103, 166);
+margin-left: 35%;
+width: 30%;color: white;
+margin-bottom: 5%;
+transition: all 0.4s;
+border-radius:10px;
+margin-top: 1%;
+}
+.upload form button:hover{
+box-shadow: 0px 0px 12px 2px rgb(230, 230, 230);
+background-color: rgb(114, 189, 235);
+color: rgb(0, 0, 0);
+}
+#dis{
+cursor:not-allowed
+}
