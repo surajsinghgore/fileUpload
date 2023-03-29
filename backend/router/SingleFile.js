@@ -22,11 +22,13 @@ const fileFilter = (req, file, cb) => {
   if (
     file.mimetype === "image/jpeg" ||
     file.mimetype === "image/png" ||
-    file.mimetype === "image/jpg"
+    file.mimetype === "image/jpg"||    file.mimetype === "image/gif"||
+        file.mimetype === "image/webp"
   ) {
     cb(null, true);
   } else {
-    cb(new Error("Only JPG , PNG , JPEG Images are Allowed To Upload"));
+     cb(new Error("Only JPG,PNG , JPEG,GIF,WEBP  Images are Allowed To Upload"));
+
   }
 };
 // set file size limit
@@ -103,8 +105,7 @@ const ress=await sendData.save()
 }
   } catch (e) {
      fs.unlink(fileName,(err=>{console.log(err)}))
-    console.log(e);
-    return res.status(500).json({ error: "Internal Server Error" });
+    return res.status(500).json({ error: e});
   }
 
   }

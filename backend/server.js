@@ -1,6 +1,6 @@
 const express=require('express')
 const app=express();
-const port=process.env.Production;
+const port=process.env.Production||5000;
 const ConnectionDB =require('./middleware/DbConnection');
 const SingleFile=require('./router/SingleFile');
 const MultiFile=require('./router/MultiFile');

@@ -8,7 +8,6 @@ let res = await fetch(`${process.env.REACT_APP_URL}/api/allFiles`);
 let resData=await res.json();
 if(res.status===200){
 setData(resData.data)
-console.log(data)
 }
 }
 useEffect(()=>{
@@ -55,7 +54,7 @@ Page <input type="text" placeholder='1' /> of 200
 {(data.map((item)=>{
 return <div className="Imgcard" key={item._id}>
 <div className="img">
-<img src={`${process.env.REACT_APP_URL}/${item.fileLocal[0]}`} alt={item.liveUrl} />
+<img src={item.liveUrl} alt={item.liveUrl} />
 <div className="hover">
 <div className="keyword">
 <h3>{item.keyword}</h3>
@@ -81,6 +80,8 @@ return <div className="Imgcard" key={item._id}>
 
 
 </div>
+
+
     </div>
   );
 }

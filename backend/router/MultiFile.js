@@ -81,6 +81,7 @@ router.post("/MultiFile", upload.array("file"), async(req, res) => {
     }
  let ressGetCloud;
  for(let i=0;i<req.files.length;i++){
+ let files=req.files[i].filename;
   let fileName=`./public/${req.files[i].filename}`;
    ressGetCloud=await cloudinary.uploader.upload(fileName, {public_id: req.files[i].filename})
 
@@ -89,7 +90,7 @@ router.post("/MultiFile", upload.array("file"), async(req, res) => {
     title,
     keyword,
     date,
-    fileLocal:fileName,
+    fileLocal:files,
     imgOnlineURl:ressGetCloud,
     liveUrl:ressGetCloud.url
     })
